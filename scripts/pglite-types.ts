@@ -101,7 +101,7 @@ async function processFile(filePath: string): Promise<QueryCall[]> {
 
 // Recursively find all TypeScript files in the directory using a promise-based glob
 function getAllTSFiles(dirPath: string): Promise<string[]> {
-  return glob(`${dirPath}/**/*.{ts,tsx}`);
+  return glob(`${dirPath}/**/*.{ts,tsx,mts,cts}`);
 }
 
 // Main function to scan codebase for query method calls
